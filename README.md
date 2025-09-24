@@ -21,7 +21,7 @@ void xor_encrypt_decrypt(char *input, char *key) {
 }
 
 int main() {
-    char url[] = "GURUPRASATH";
+    char url[] = "WELCOME";
     char key[] = "secretkey";
     
     printf("Original text: %s\n", url);
