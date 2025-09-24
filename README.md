@@ -8,10 +8,40 @@ AES does not use a Feistel network like DES, it uses variant of Rijndael.
 It has a fixed block size of 128 bits, and a key size of 128, 192, or 256 bits.
 AES operates on a 4 × 4 column-major order array of bytes, termed the state
 # PROGRAM:
+```
+#include <stdio.h>
+#include <string.h>
 
+void xor_encrypt_decrypt(char *input, char *key) {
+    int input_len = strlen(input);
+    int key_len = strlen(key);
+    for (int i = 0; i < input_len; i++) {
+        input[i] = input[i] ^ key[i % key_len];
+    }
+}
+
+int main() {
+    char url[] = "GURUPRASATH";
+    char key[] = "secretkey";
+    
+    printf("Original text: %s\n", url);
+    xor_encrypt_decrypt(url, key);
+    printf("Encrypted text: %s\n", url);
+    xor_encrypt_decrypt(url, key);
+    printf("Decrypted text: %s\n", url);
+
+    return 0;
+}
+
+```
+# Developed by :Guru Prasath K M
+# Reg No : 212224230079
 # OUTPUT:
+<img width="415" height="246" alt="image" src="https://github.com/user-attachments/assets/bd3a849b-5bc5-49e9-bb20-d82f6f52d4da" />
 
 
 # RESULT:
+Thus,to use Advanced Encryption Standard (AES) Algorithm for a practical application like URL Encryption has been done 
+
 
 
